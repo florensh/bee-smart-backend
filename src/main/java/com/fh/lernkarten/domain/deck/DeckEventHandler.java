@@ -15,7 +15,7 @@ public class DeckEventHandler {
 	
 	@HandleBeforeCreate
 	@HandleBeforeSave
-	public void removeOldDeck(){
+	public void removeOldDeck(Deck deck){
 		this.deckRepository.deleteAll();
 	}
 
