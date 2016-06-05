@@ -13,6 +13,14 @@ public class Deck {
 	
 	private float percent;
 
+	public float getPercent() {
+		return percent;
+	}
+
+	public void setPercent(float percent) {
+		this.percent = percent;
+	}
+
 	private Set<Card> cards;
 
 	public Set<Card> getCards() {
