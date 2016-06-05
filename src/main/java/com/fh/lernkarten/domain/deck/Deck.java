@@ -10,6 +10,8 @@ public class Deck {
 	private String id;
 
 	private String name;
+	
+	private float percent;
 
 	private Set<Card> cards;
 
