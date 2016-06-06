@@ -1,5 +1,6 @@
 package com.fh.lernkarten.domain.deck;
 
+import java.util.Collection;
 import java.util.Set;
 
 import org.springframework.data.annotation.Id;
@@ -19,6 +20,10 @@ public class Deck {
 
 	public void setPercent(float percent) {
 		this.percent = percent;
+	}
+	
+	public void addCards(Collection<Card> cards){
+		this.cards.addAll(cards);
 	}
 
 	private Set<Card> cards;
@@ -49,25 +54,25 @@ public class Deck {
 
 }
 
-class Card {
-
-	private String question;
-
-	private String answer;
-
-	public String getAnswer() {
-		return answer;
-	}
-
-	public String getQuestion() {
-		return question;
-	}
-
-	public void setAnswer(String answer) {
-		this.answer = answer;
-	}
-
-	public void setQuestion(String question) {
-		this.question = question;
-	}
-}
+//class Card {
+//
+//	private String question;
+//
+//	private String answer;
+//
+//	public String getAnswer() {
+//		return answer;
+//	}
+//
+//	public String getQuestion() {
+//		return question;
+//	}
+//
+//	public void setAnswer(String answer) {
+//		this.answer = answer;
+//	}
+//
+//	public void setQuestion(String question) {
+//		this.question = question;
+//	}
+//}
