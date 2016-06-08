@@ -5,8 +5,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 
 import com.fh.lernkarten.domain.deck.Card;
+import com.fh.lernkarten.domain.deck.Deck;
 
 public class StudySession {
 
@@ -16,6 +18,9 @@ public class StudySession {
 	private Set<Card> knownCards = new HashSet<Card>();
 	private Set<Card> unknownCards = new HashSet<Card>();
 	private Date date;
+	
+	@DBRef
+	private Deck deck;
 
 	public Set<Card> getKnownCards() {
 		return knownCards;
