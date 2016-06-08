@@ -1,5 +1,6 @@
 package com.fh.lernkarten.domain.deck;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -17,7 +18,7 @@ public class Deck {
 	private String name;
 	
 	@DBRef
-	private List<StudySession> sessions;
+	private List<StudySession> sessions = new ArrayList<StudySession>();
 	
 	public void addCards(Collection<Card> cards){
 		this.cards.addAll(cards);
