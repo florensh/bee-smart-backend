@@ -7,9 +7,11 @@ import java.util.Set;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fh.lernkarten.domain.studySession.StudySession;
 
+@Document
 public class Deck {
 
 	@Id
@@ -17,8 +19,8 @@ public class Deck {
 
 	private String name;
 	
-//	@DBRef
-//	private List<StudySession> sessions = new ArrayList<StudySession>();
+	@DBRef
+	private List<StudySession> sessions = new ArrayList<StudySession>();
 	
 	public void addCards(Collection<Card> cards){
 		this.cards.addAll(cards);
