@@ -38,7 +38,7 @@ public class StudySession {
 
 	private Date date;
 
-//	@DBRef
+	@DBRef
 	private Deck deck;
 
 	public Set<Card> getKnownCards() {
