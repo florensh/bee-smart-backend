@@ -1,9 +1,13 @@
 package com.fh.lernkarten.domain.deck;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Set;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
+import com.fh.lernkarten.domain.studySession.StudySession;
 
 public class Deck {
 
@@ -12,15 +16,8 @@ public class Deck {
 
 	private String name;
 	
-	private float percent;
-
-	public float getPercent() {
-		return percent;
-	}
-
-	public void setPercent(float percent) {
-		this.percent = percent;
-	}
+	@DBRef
+	private List<StudySession> sessions;
 	
 	public void addCards(Collection<Card> cards){
 		this.cards.addAll(cards);
