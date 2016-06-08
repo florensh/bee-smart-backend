@@ -19,7 +19,7 @@ public class Deck {
 
 	private String name;
 	
-//	@DBRef
+	@DBRef
 	private List<StudySession> sessions = new ArrayList<StudySession>();
 	
 	public void addCards(Collection<Card> cards){
