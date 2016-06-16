@@ -1,7 +1,7 @@
 package com.fh.lernkarten.domain.studySession;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface StudySessionRepository  extends PagingAndSortingRepository<StudySession, String> {
+public interface StudySessionRepository  extends MongoRepository<StudySession, String> {
 
 }

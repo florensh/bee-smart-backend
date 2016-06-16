@@ -1,8 +1,8 @@
 package com.fh.lernkarten.domain.deck;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.mongodb.repository.MongoRepository;
 
-public interface DeckRepository  extends PagingAndSortingRepository<Deck, String> {
+public interface DeckRepository  extends MongoRepository<Deck, String> {
 	
 	Deck findByName(String name);
 
